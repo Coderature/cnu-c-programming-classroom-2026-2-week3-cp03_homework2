@@ -4,19 +4,25 @@ int g = 0;
 
 void f()
 {
-    int l = 1;
-    static int s = 0;
+    int local_var = 1;
+    static int static_var = 0;
 
     g++;
-    s++;
-    printf("g: %d l: %d s: %d\n", g, l, s);
+    static_var++;
+
+    printf("global_var: %d\n", g);
+    printf("static_var: %d\n", static_var);
+    printf("local_var: %d\n", local_var);
+    if (g < 3) {
+        printf("\n");
+    }
 }
 
 int main()
 {
     f();
     f();
-    f(); // g, s는 계속 증가
+    f();
 
     return 0;
 }

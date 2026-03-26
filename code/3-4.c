@@ -19,7 +19,9 @@ int max_of(int n, ...) {
 }
 
 int main() {
-    printf("%d\n", max_of(5, 1, 9, 2, 3, 4)); // 최대값 구하기
+    printf("%d\n", max_of(3, 10, 12, 5));
+    printf("%d\n", max_of(4, 6, 1, 2, 3));
+    printf("%d\n", max_of(3, 300, 200, 100));
 
     return 0;
 }

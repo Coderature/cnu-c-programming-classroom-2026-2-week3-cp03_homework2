@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 void divide(int a, int b, int *q, int *r) {
-    // return으로는 값을 하나
     *q = a / b;
     *r = a % b;
 }
@@ -12,7 +11,8 @@ int main() {
     int q, r;
 
     divide(a, b, &q, &r);
-    printf("%d %d\n", q, r);
+    printf("%d\n", q);
+    printf("%d\n", r);
 
     return 0;
 }

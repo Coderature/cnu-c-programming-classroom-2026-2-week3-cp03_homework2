@@ -22,7 +22,10 @@ void my_sum(char type, int n, ...) {
     }
     else if (type == 'S') {
         for (i = 0; i < n; i++) {
-            printf("%s ", va_arg(ap, char *));
+            printf("%s", va_arg(ap, char *));
+            if (i != n - 1) {
+                printf(" ");
+            }
         }
         printf("\n");
     }
@@ -31,9 +34,9 @@ void my_sum(char type, int n, ...) {
 }
 
 int main() {
-    my_sum('D', 3, 1, 2, 3);
-    my_sum('C', 3, 'a', 'b', 'c');
-    my_sum('S', 2, "hi", "world"); // 타입 따라 출력
+    my_sum('S', 2, "Hello", "World");
+    my_sum('C', 3, 'C', 'N', 'U');
+    my_sum('D', 4, 10, 20, 30, 40);
 
     return 0;
 }

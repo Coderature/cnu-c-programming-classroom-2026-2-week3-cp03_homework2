@@ -16,7 +16,8 @@ int average(int n, ...) {
 }
 
 int main() {
-    printf("%d\n", average(3, 1, 2, 3)); // 평균 구하기
+    printf("%d\n", average(3, 10, 20, 30));
+    printf("%d\n", average(2, 20, 40));
 
     return 0;
 }
